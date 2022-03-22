@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Notes"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+    </Toolbar>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:background="@drawable/textbg"
+        android:fontFamily="@font/alata"
+        android:gravity="bottom"
+        android:hint="Enter Text"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Enter Text Here" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.15"
+        android:background="@color/olive"
+        android:onClick="submitData"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="576dp"
+            tools:listitem="@layout/item" />
+
+
+
+
+
+</LinearLayout>
